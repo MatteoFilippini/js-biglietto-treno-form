@@ -13,6 +13,7 @@ Il recap dei dati e l'output del prezzo finale va stampato in pagina
 // PRENDO LE VARIABILI DAL DOM
 const nameElement = document.getElementById('name');
 const buttonElement = document.querySelector('button');
+const placeholder = document.getElementById('placeholder');
 
 
 // QUANDO SCHIACCIO IL BOTTONE FACCIO QUALCOSA
