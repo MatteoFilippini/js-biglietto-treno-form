@@ -18,7 +18,8 @@ const ageElement = document.getElementById('age');
 const buttonElement = document.querySelector('button');
 const buttonDeleteElement = document.getElementById('reset');
 
-const placeholder = document.getElementById('placeholder');
+// const placeholder = document.getElementById('placeholder');
+const placeholder = document.querySelector('.placeholder');
 
 
 // QUANDO SCHIACCIO IL BOTTONE FACCIO QUALCOSA
@@ -40,11 +41,13 @@ buttonElement.addEventListener('click', function () {
         }
         // ARROTONDO A 2 CIFE DECIMALI
         rate = rate.toFixed(2);
-        placeholder.innerHTML =
-            `Ciao ${nameValue}
-            percorrerai ${pathValue} chilometri e sei un ${ageValue} <br>
-            ${message}: ${rate} euro
-        `;
+        // FACCIO VEDERE IL BIBGLIETTO
+        placeholder.classList.add('visible');
+        // placeholder.innerHTML =
+        //     `Ciao ${nameValue}
+        //     percorrerai ${pathValue} chilometri e sei un ${ageValue} <br>
+        //     ${message}: ${rate} euro
+        // `;
     }
 })
 
@@ -54,6 +57,7 @@ buttonDeleteElement.addEventListener('click', function () {
     nameElement.value = '';
     pathElement.value = '';
     ageElement.value = '';
+    placeholder.classList.remove('visible');
 })
 
 
