@@ -12,23 +12,30 @@ Il recap dei dati e l'output del prezzo finale va stampato in pagina
 
 // PRENDO LE VARIABILI DAL DOM
 const nameElement = document.getElementById('name');
+const pathElement = document.getElementById('path');
+
 const buttonElement = document.querySelector('button');
 const buttonDeleteElement = document.getElementById('reset');
+
 const placeholder = document.getElementById('placeholder');
 
 
 // QUANDO SCHIACCIO IL BOTTONE FACCIO QUALCOSA
 buttonElement.addEventListener('click', function () {
     const nameValue = nameElement.value;
+    const pathValue = pathElement.value;
     // STAMPO SOLO SE L'INPUT E' RIEMPITO
-    if (nameElement) {
-        placeholder.innerHTML = `Ciao ${nameValue}`;
+    if (nameValue && pathValue) {
+        placeholder.innerHTML = `Ciao ${nameValue}
+        percorrerai ${pathValue} chilometri
+        `;
     }
 })
 
 
 // QUANDO SCHIACCIO IL BOTTONE RESETTO I CAMPI
 buttonDeleteElement.addEventListener('click', function () {
-    nameElement.value = 'a';
+    nameElement.value = '';
+    pathElement.value = '';
 })
 
