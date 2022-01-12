@@ -13,6 +13,7 @@ Il recap dei dati e l'output del prezzo finale va stampato in pagina
 // PRENDO LE VARIABILI DAL DOM
 const nameElement = document.getElementById('name');
 const pathElement = document.getElementById('path');
+const ageElement = document.getElementById('age');
 
 const buttonElement = document.querySelector('button');
 const buttonDeleteElement = document.getElementById('reset');
@@ -20,16 +21,34 @@ const buttonDeleteElement = document.getElementById('reset');
 const placeholder = document.getElementById('placeholder');
 
 
+
+
+
 // QUANDO SCHIACCIO IL BOTTONE FACCIO QUALCOSA
 buttonElement.addEventListener('click', function () {
     const nameValue = nameElement.value;
     const pathValue = pathElement.value;
+    const ageValue = ageElement.value;
+    let message = 'tariffa base';
+    let rate = pathElement.value * 0.21;
     // STAMPO SOLO SE L'INPUT E' RIEMPITO
-    if (nameValue && pathValue) {
-        placeholder.innerHTML = `Ciao ${nameValue}
-        percorrerai ${pathValue} chilometri
+    if (nameValue && pathValue && ageValue) {
+        // CONTROLLO SCONTO
+        if (ageValue === 'minorenne') {
+            rate *= 0.8;
+            message = 'Sconto minorenni applicato';
+        } else if (ageValue === 'over65') {
+            rate *= 0.6;
+            message = 'Sconto over applicato';
+        }
+        placeholder.innerHTML =
+            `Ciao ${nameValue}
+            percorrerai ${pathValue} chilometri e sei un ${ageValue} <br>
+            ${message}: ${rate} euro
         `;
     }
+    // console.log(rate);
+    // console.log(message);
 })
 
 
@@ -37,5 +56,7 @@ buttonElement.addEventListener('click', function () {
 buttonDeleteElement.addEventListener('click', function () {
     nameElement.value = '';
     pathElement.value = '';
+    ageElement.value = '';
 })
+
 
