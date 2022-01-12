@@ -10,3 +10,9 @@ Il recap dei dati e l'output del prezzo finale va stampato in pagina
 (formattato con massimo due decimali, per indicare centesimi sul prezzo).
 */
 
+// PRENDO LE VARIABILI DAL DOM
+const nameElement = document.getElementById('name');
+const buttonElement = document.querySelector('button');
+
+// QUANDO SCHIACCIO IL BOTTONE FACCIO QUALCOSA
+
