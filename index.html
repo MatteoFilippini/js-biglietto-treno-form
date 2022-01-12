@@ -37,17 +37,36 @@
                 <h1 class="m-30">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
                 <div class="form m-30">
                     <div class="form-input h-50 b">
+                        <!-- CHIEDO IL NOME ALL'UTENTE -->
                         <div class="row">
-                            <div class="col"><label for="name">Inserisci il tuo nome</label></div>
-                            <div class="col"><input type="text" name="name" id="name"></div>
+                            <div class="col">
+                                <label for="name">Inserisci il tuo nome</label>
+                            </div>
+                            <div class="col">
+                                <input type="text" name="name" id="name">
+                            </div>
                         </div>
+                        <!-- QUANTI CHILOMETRI VUOI PERCORRERE? -->
                         <div class="row">
-                            <div class="col">chili</div>
-                            <div class="col">dsfds</div>
+                            <div class="col">
+                                <label for="path">Quanti chilometri vuoi percorrere?</label>
+                            </div>
+                            <div class="col">
+                                <input type="number" name="path" id="path">
+                            </div>
                         </div>
+                        <!-- ETA -->
                         <div class="row">
-                            <div class="col">eta</div>
-                            <div class="col">dsfds</div>
+                            <div class="col">
+                                <label for="age">fascia d'età</label>
+                            </div>
+                            <div class="col">
+                                <select name="age" id="age">
+                                    <option value="minorenne">Minorenne</option>
+                                    <option value="maggiorenne">Maggiorenne</option>
+                                    <option value="over65">over65</option> -->
+                                </select>
+                            </div>
                         </div>
                     </div>
                     <div class="form-button h-50 b">
