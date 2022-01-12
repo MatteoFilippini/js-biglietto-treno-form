@@ -14,5 +14,10 @@ Il recap dei dati e l'output del prezzo finale va stampato in pagina
 const nameElement = document.getElementById('name');
 const buttonElement = document.querySelector('button');
 
+
 // QUANDO SCHIACCIO IL BOTTONE FACCIO QUALCOSA
+buttonElement.addEventListener('click', function () {
+    // const nameValue = nameElement.value;
+    console.log(nameElement.value);
+})
 
