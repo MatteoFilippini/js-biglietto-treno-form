@@ -39,14 +39,47 @@
                 <h1 class="m-30">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
                 <div class="form m-30">
                     <!-- FORM -->
-                    <div class="form-input h-50 b">
-                        <!-- CHIEDO IL NOME ALL'UTENTE -->
-                        <div class="row">
-                            <div class="col border border-primary">
-
+                    <div class="form-input">
+                        <div class="container">
+                            <div class="row">
+                                <!-- CHIEDO IL NOME ALL'UTENTE -->
+                                <div class="col">
+                                    <div class="row flex-column">
+                                        <div class="col text-center">
+                                            <label for="name">Inserisci il tuo nome</label>
+                                        </div>
+                                        <div class="col text-center">
+                                            <input type="text" name="name" id="name" value="B">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- QUANTI CHILOMETRI VUOI PERCORRERE -->
+                                <div class="col">
+                                    <div class="row flex-column">
+                                        <div class="col text-center">
+                                            <label for="path">Quanti chilometri vuoi percorrere?</label>
+                                        </div>
+                                        <div class="col text-center">
+                                            <input type="number" name="path" id="path" value="4">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ETA -->
+                                <div class="col">
+                                    <div class="row flex-column">
+                                        <div class="col text-center">
+                                            <label for="age">Fascia d'età</label>
+                                        </div>
+                                        <div class="col text-center">
+                                            <select name="age" id="age">
+                                                <option value="minorenne">Minorenne</option>
+                                                <option value="maggiorenne">Maggiorenne</option>
+                                                <option value="over65">over65</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col"></div>
-                            <div class="col"></div>
                         </div>
                     </div>
                     <!-- BUTTON -->
@@ -57,17 +90,27 @@
                         </div>
                     </div>
                 </div>
-                <div class="placeholder">
-                    <h1>IL TUO BIGLIETTO</h1>
-                    <div class="form m-30">
-                        <h2>DETTAGLIO PASSEGGERI</h2>
-                        <div class="ticket">
-                            <div class="row">
-                                <div class="col"></div>
-                                <div class="col"></div>
+                <div class="placeholder form">
+                    <div class="container">
+                        <div class="ro">
+                            <div class="col">
+                                <h5>DETTAGLIO PASSEGGERI</h5>
                             </div>
                         </div>
+                        <div class="row border border-secondary">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5>NOME PASSEGGERO</h5>
+                                        <span id="username"></span>
+                                    </div>
+                                    <div class="col"></div>
+                                </div>
+                            </div>
+                            <div class="col"></div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>

@@ -4,27 +4,10 @@
     padding: 0;
     font-family: sans-serif;
     box-sizing: border-box;
-    font-size: 20px;
-}
-
-.container{
-    width: 100%;
-    max-width: 1080px;
-    margin: 0 auto;
-    border: 1px solid black;
-    min-height: 700px;
 }
 
 .m-30{
     margin: 30px 0;
-}
-
-.h-50{
-    height: 50%;
-}
-
-.b{
-    border: 1px dashed black;
 }
 
 /* BACKGROUND */
@@ -47,12 +30,6 @@ h1{
     height: 200px;
     border-radius: 10px;
     padding: 20px;
-}
-
-.form-input{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
 
 input{
@@ -102,17 +79,13 @@ button:hover{
 }
 
 /* PLACEHOLDER */
-.placeholder{
-    display: none;
-    
+/* .placeholder{
+    display: none;   
 }
 
 .visible{
     display: block;
-}
-
-
-
+} */
 
 
 

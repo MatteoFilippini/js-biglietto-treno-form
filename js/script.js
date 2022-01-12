@@ -42,6 +42,7 @@ buttonElement.addEventListener('click', function () {
         rate = rate.toFixed(2);
         // FACCIO VEDERE IL BIBGLIETTO
         placeholder.classList.add('visible');
+        document.getElementById('username').innerText = `${nameValue}`;
     }
 })
 
