@@ -19,7 +19,9 @@ const placeholder = document.getElementById('placeholder');
 // QUANDO SCHIACCIO IL BOTTONE FACCIO QUALCOSA
 buttonElement.addEventListener('click', function () {
     const nameValue = nameElement.value;
-    // console.log(nameElement.value);
-    placeholder.innerHTML = `${nameValue}`;
+    // STAMPO SOLO SE L'INPUT E' RIEMPITO
+    if (nameElement) {
+        placeholder.innerHTML = `Ciao ${nameValue}`;
+    }
 })
 
