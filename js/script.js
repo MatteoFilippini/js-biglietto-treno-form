@@ -18,7 +18,6 @@ const ageElement = document.getElementById('age');
 const buttonElement = document.querySelector('button');
 const buttonDeleteElement = document.getElementById('reset');
 
-// const placeholder = document.getElementById('placeholder');
 const placeholder = document.querySelector('.placeholder');
 
 
@@ -43,11 +42,6 @@ buttonElement.addEventListener('click', function () {
         rate = rate.toFixed(2);
         // FACCIO VEDERE IL BIBGLIETTO
         placeholder.classList.add('visible');
-        // placeholder.innerHTML =
-        //     `Ciao ${nameValue}
-        //     percorrerai ${pathValue} chilometri e sei un ${ageValue} <br>
-        //     ${message}: ${rate} euro
-        // `;
     }
 })
 
