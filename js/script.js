@@ -21,9 +21,6 @@ const buttonDeleteElement = document.getElementById('reset');
 const placeholder = document.getElementById('placeholder');
 
 
-
-
-
 // QUANDO SCHIACCIO IL BOTTONE FACCIO QUALCOSA
 buttonElement.addEventListener('click', function () {
     const nameValue = nameElement.value;
@@ -41,14 +38,14 @@ buttonElement.addEventListener('click', function () {
             rate *= 0.6;
             message = 'Sconto over applicato';
         }
+        // ARROTONDO A 2 CIFE DECIMALI
+        rate = rate.toFixed(2);
         placeholder.innerHTML =
             `Ciao ${nameValue}
             percorrerai ${pathValue} chilometri e sei un ${ageValue} <br>
             ${message}: ${rate} euro
         `;
     }
-    // console.log(rate);
-    // console.log(message);
 })
 
 
