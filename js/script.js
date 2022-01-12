@@ -13,6 +13,7 @@ Il recap dei dati e l'output del prezzo finale va stampato in pagina
 // PRENDO LE VARIABILI DAL DOM
 const nameElement = document.getElementById('name');
 const buttonElement = document.querySelector('button');
+const buttonDeleteElement = document.getElementById('reset');
 const placeholder = document.getElementById('placeholder');
 
 
@@ -23,5 +24,11 @@ buttonElement.addEventListener('click', function () {
     if (nameElement) {
         placeholder.innerHTML = `Ciao ${nameValue}`;
     }
+})
+
+
+// QUANDO SCHIACCIO IL BOTTONE RESETTO I CAMPI
+buttonDeleteElement.addEventListener('click', function () {
+    nameElement.value = 'a';
 })
 
